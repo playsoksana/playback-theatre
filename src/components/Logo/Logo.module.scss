@@ -1,0 +1,41 @@
+@value white-text-transparent from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+@value white-color from '../../styles/vars.module.scss';
+
+@import "../../styles/vars.module.scss";
+
+.Logo {
+  @include flex-center;
+  @include style-text(white-color, 16px, 700);
+  @include transition(color);
+
+  flex-direction: column;
+  padding: 0px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: accent-color;
+  }
+
+  &:hover .ContainerIcon,
+  &:focus .ContainerIcon {
+    border-color: accent-color;
+    color: accent-color;
+  }
+}
+
+.LogoIcon {
+  width: 32px;
+  height: 32px;
+  transform: rotate(180deg);
+  margin-left: -5px;
+  fill: currentColor;
+}
+
+
+
+.Text {
+  margin: 0;
+  font-family: "Merriweather", serif;
+}

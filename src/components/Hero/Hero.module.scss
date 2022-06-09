@@ -1,0 +1,99 @@
+@import "../../styles/vars.module.scss";
+@value dark-background from "../../styles/vars.module.scss";
+@value white-color from "../../styles/vars.module.scss";
+@value mobile from "../../styles/vars.module.scss";
+@value tablet from "../../styles/vars.module.scss";
+@value laptop from "../../styles/vars.module.scss";
+
+.Hero {
+  max-width: 100%;
+  min-height: 350px;
+  margin: 0 auto;
+  background-color: dark-background;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.Wrap {
+  padding: 0 5px;
+  margin: 0 auto;
+  max-width: 100%;
+
+}
+
+.Title {
+  @include style-text(white-color, 60px, 500);
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.8;
+}
+
+.Text {
+  margin: 0;
+  @include style-text(white-color, 6px, 400);
+  max-width: 18%;
+  font-family: "Merriweather", serif;
+}
+
+@media screen and (min-width: mobile) {
+  .Hero {
+    color: rgb(73, 69, 69);    
+    min-height: 400px;
+ 
+  }
+
+
+  .Title {
+    font-size: 76px;
+  }
+
+  .Text {
+    @include style-text(white-color, 8px, 400);
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .Hero {
+    max-width: laptop;
+    height: 100vh;
+  }
+
+  .Wrap {
+    max-width: tablet;
+    padding: 0 15px;
+  }
+
+  .Title {
+    font-size: 140px;
+  }
+
+  .Text {
+    @include style-text(white-color, 9px, 400);
+  }
+}
+
+@media screen and (min-width: laptop) {
+  .Hero {
+    max-width: 1600px;
+    height: 100vh;
+  }
+
+  .Wrap {
+    max-width: laptop;
+    padding: 0 15px;
+  }
+
+  .Title {
+    font-size: 170px;
+  }
+
+  .Text {
+    @include style-text(white-color, 10px, 100);
+  }
+}

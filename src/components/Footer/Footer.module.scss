@@ -1,0 +1,115 @@
+@import "../../styles/vars.module.scss";
+@value white-text-transparent from '../../styles/vars.module.scss';
+@value dark-background from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+@value laptop from '../../styles/vars.module.scss';
+@value tablet from '../../styles/vars.module.scss';
+@value mobile from '../../styles/vars.module.scss';
+
+footer {
+  background-color: dark-background;
+  color: white-text-transparent;
+  position: relative;
+}
+
+footer::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  opacity: 0.6;
+  background-color: white-text-transparent;
+  bottom: 40px;
+}
+
+.Wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.List {
+  @include style-text(white-text-transparent, 14px, 500);
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.List li {
+  width: 100%;
+  padding: 5px 0;
+  @include transition(color);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: accent-color;
+  }
+}
+
+.Join {
+  margin: 40px 0 0;
+}
+
+.SocialWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Signature {
+  text-align: center;
+  margin: 0;
+
+  @include style-text(white-text-transparent, 14px, 300);
+}
+
+@media screen and (min-width: mobile) {
+  .List {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .List li:nth-child(2n) {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .Wrap {
+    align-items: flex-start;
+  }
+
+  .List li:nth-child(2n) {
+    text-align: left;
+  }
+
+  .SocialWrap {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: laptop) {
+  .Wrap {
+    flex-direction: row;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .List {
+    max-width: 50%;
+    margin-left: 200px;
+    margin-bottom: 30px;
+  }
+
+  .Join {
+    margin: 0;
+  }
+
+  .Signature {
+    text-align: left;
+  }
+}

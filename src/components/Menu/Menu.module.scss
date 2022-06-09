@@ -1,0 +1,23 @@
+@import "../../styles/vars.module.scss";
+@value accent-color from '../../styles/vars.module.scss';
+@value tablet from '../../styles/vars.module.scss';
+.Icon {
+  @include flex-center;
+  @include transition(color);
+  cursor: pointer;
+  padding: 20px 0;
+  fill: currentColor;
+  width: 40px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    color: accent-color;
+  }
+}
+
+@media screen and (min-width: tablet){
+  .Icon {
+display: none;
+  }
+}
