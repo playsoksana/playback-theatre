@@ -5,33 +5,30 @@
 @value white-text-transparent: rgba(255, 255, 255, 0.7);
 @value accent-color: rgb(251, 91, 5);
 
-
 /* BACKGROUND COLOR */
 @value dark-background: rgb(50, 47, 47);
 
 /* MIXIN */
 
 @mixin style-text($color, $font-size, $font-weight) {
-    color: $color;
-    font-size: $font-size;
-    font-weight: $font-weight;
-  }
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
 
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin transition($property...) {
-    transition-property: $property;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
-  }
+  transition-property: $property;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
 
-
-
-// breakpoints 
+// breakpoints
 @value laptop: 1280px;
 @value tablet: 768px;
 @value mobile: 480px;

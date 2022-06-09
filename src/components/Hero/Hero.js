@@ -16,6 +16,10 @@ const Hero = () => {
           глядачів.
         </p>
         <h1 className={style.Title}>Kyiv Playback Theatre</h1>
+        <ul className={style.List}>
+          <li className={style.Item}>Галерея</li>
+          <li className={style.Item}>Допомогти проекту</li>
+        </ul>
       </div>
         
       </section>

@@ -3,6 +3,7 @@
 @value laptop from '../../styles/vars.module.scss';
 @value tablet from '../../styles/vars.module.scss';
 @value mobile from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
 
 .List {
     display: none;
@@ -15,8 +16,13 @@
 .Item {
     padding: 10px 0;
     @include style-text(white-color, 16px, 400);
+    @include transition(color);
     &:not(:last-child) {
         margin-right: 30px;
+    }
+    &:hover,
+    &:focus {
+color: accent-color;
     }
 }
 
