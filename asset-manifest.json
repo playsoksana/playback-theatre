@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/playback-theatre/static/css/main.a69d82cd.css",
-    "main.js": "/playback-theatre/static/js/main.128f63d4.js",
+    "main.css": "/playback-theatre/static/css/main.4f6304ec.css",
+    "main.js": "/playback-theatre/static/js/main.9288500e.js",
     "static/media/hero-img.jpg": "/playback-theatre/static/media/hero-img.1814a48936ff83bd519d.jpg",
     "index.html": "/playback-theatre/index.html",
     "static/media/logo.svg": "/playback-theatre/static/media/logo.a259cfd4b64364630794331c26ea20d4.svg",
     "static/media/facebook.svg": "/playback-theatre/static/media/facebook.f48153c734531a33854271e5a3d024c5.svg",
     "static/media/menu.svg": "/playback-theatre/static/media/menu.d0905d7134e3e09807d8afe7fa2891f2.svg",
-    "main.a69d82cd.css.map": "/playback-theatre/static/css/main.a69d82cd.css.map",
-    "main.128f63d4.js.map": "/playback-theatre/static/js/main.128f63d4.js.map"
+    "main.4f6304ec.css.map": "/playback-theatre/static/css/main.4f6304ec.css.map",
+    "main.9288500e.js.map": "/playback-theatre/static/js/main.9288500e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a69d82cd.css",
-    "static/js/main.128f63d4.js"
+    "static/css/main.4f6304ec.css",
+    "static/js/main.9288500e.js"
   ]
 }
