@@ -8,7 +8,7 @@
 
 .Hero {
   max-width: 100%;
-  min-height: 350px;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: dark-background;
   background-repeat: no-repeat;
@@ -51,6 +51,7 @@
 
 .Item {
   @include transition(color);
+  cursor: pointer;
   &:hover,
   &:focus {
     color: accent-color;
@@ -64,7 +65,8 @@
 @media screen and (min-width: mobile) {
   .Hero {
     color: rgb(73, 69, 69);
-    min-height: 400px;
+ 
+    
   }
 
   .Title {

@@ -15,6 +15,7 @@
 
 .Item {
     padding: 10px 0;
+    cursor: pointer;
     @include style-text(white-color, 16px, 400);
     @include transition(color);
     &:not(:last-child) {
