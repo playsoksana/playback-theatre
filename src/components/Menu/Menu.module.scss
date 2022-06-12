@@ -12,7 +12,8 @@
   background-color: transparent;
   color: inherit;
   padding: 10px;
-outline: none;
+  outline: none!important;
+  border-color: transparent;
   &:hover,
   &:focus {
     color: accent-color;

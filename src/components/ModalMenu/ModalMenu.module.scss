@@ -46,7 +46,8 @@ color: accent-color;
   color: inherit;
   background-color: transparent;
   padding: 10px;
-  outline: none;
+  outline: none!important;
+  border-color: transparent;
 }
 
 .Cancel {
