@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/playback-theatre/static/css/main.410a1458.css",
+    "main.css": "/playback-theatre/static/css/main.62227855.css",
     "main.js": "/playback-theatre/static/js/main.a054f386.js",
     "static/media/hero-img.jpg": "/playback-theatre/static/media/hero-img.1814a48936ff83bd519d.jpg",
     "static/media/logo.svg": "/playback-theatre/static/media/logo.f53fc2e99f4f5d9d6df6b33e9727f101.svg",
@@ -8,11 +8,11 @@
     "static/media/cancel-circle.svg": "/playback-theatre/static/media/cancel-circle.8855c6820789cbddfd772a150d7110ab.svg",
     "static/media/facebook.svg": "/playback-theatre/static/media/facebook.f48153c734531a33854271e5a3d024c5.svg",
     "static/media/menu.svg": "/playback-theatre/static/media/menu.d0905d7134e3e09807d8afe7fa2891f2.svg",
-    "main.410a1458.css.map": "/playback-theatre/static/css/main.410a1458.css.map",
+    "main.62227855.css.map": "/playback-theatre/static/css/main.62227855.css.map",
     "main.a054f386.js.map": "/playback-theatre/static/js/main.a054f386.js.map"
   },
   "entrypoints": [
-    "static/css/main.410a1458.css",
+    "static/css/main.62227855.css",
     "static/js/main.a054f386.js"
   ]
 }
