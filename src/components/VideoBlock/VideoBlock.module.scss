@@ -1,0 +1,13 @@
+@value accent-color from '../../styles/vars.module.scss';
+
+@import "../../styles/vars.module.scss";
+
+
+.Section {
+    position: relative;
+    background-color: accent-color;
+    height: 100vh;
+
+}
+
+

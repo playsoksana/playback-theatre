@@ -1,0 +1,67 @@
+@import "../../styles/vars.module.scss";
+@value tablet from '../../styles/vars.module.scss';
+@value white-color from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+
+.Backdrop {
+  z-index: 999;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 80px 30px;
+
+  overflow: auto;
+}
+
+.List {
+  @include style-text(white-color, 20px, 500);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Item {
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: underline;
+  @include transition(color);
+  &:hover,
+  &:focus {
+color: accent-color;
+  }
+}
+
+.Button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: inherit;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.Cancel {
+ 
+  fill: currentColor;
+  @include transition(color);
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus {
+    color: accent-color;
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .Backdrop {
+    display: none;
+  }
+}

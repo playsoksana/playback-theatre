@@ -7,20 +7,15 @@ import SocialNetworks from "../SocialNetworks";
 
 import style from "./Footer.module.scss";
 
+import listMenu from "../../file/listMenu";
+
 const Footer = ({ test }) => (
   <footer>
     <Container>
       <div className={style.Wrap}>
         <Logo />
         <ul className={style.List}>
-          <li>Блог</li>
-          <li>Галерея</li>
-          <li>Актори</li>
-          <li>Заплановані вистави</li>
-          <li>Допомогти проекту</li>
-          <li>Прийняти участь у проекті</li>
-          <li>Замовити виставу</li>
-          <li>Контакти</li>
+         {listMenu.map((item, index)=><li key={index}>{item}</li>)}
         </ul>
         <div className={style.SocialWrap}>
           <p className={style.Join}>Приєднуйтесь до спільноти</p>

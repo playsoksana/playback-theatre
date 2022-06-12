@@ -6,7 +6,7 @@
 
 .Logo {
   @include flex-center;
-  @include style-text(white-color, 16px, 700);
+  @include style-text(white-color, 8px, 700);
   @include transition(color);
 
   flex-direction: column;
@@ -26,16 +26,7 @@
 }
 
 .LogoIcon {
-  width: 32px;
-  height: 32px;
-  transform: rotate(180deg);
-  margin-left: -5px;
+  width: 50px;
+  height: 70px;
   fill: currentColor;
-}
-
-
-
-.Text {
-  margin: 0;
-  font-family: "Merriweather", serif;
 }

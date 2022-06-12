@@ -1,14 +1,17 @@
 @import "../../styles/vars.module.scss";
 @value accent-color from '../../styles/vars.module.scss';
 @value tablet from '../../styles/vars.module.scss';
-.Icon {
+
+
+.Button {
   @include flex-center;
   @include transition(color);
   cursor: pointer;
   padding: 20px 0;
   fill: currentColor;
-  width: 40px;
-  height: 40px;
+  background-color: transparent;
+  color: inherit;
+  padding: 10px;
 
   &:hover,
   &:focus {
@@ -16,8 +19,13 @@
   }
 }
 
-@media screen and (min-width: tablet){
-  .Icon {
-display: none;
+.MenuIcon {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (min-width: tablet) {
+  .Button {
+    display: none;
   }
 }
