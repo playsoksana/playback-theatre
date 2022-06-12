@@ -41,11 +41,12 @@ color: accent-color;
 
 .Button {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   color: inherit;
   background-color: transparent;
   padding: 10px;
+  outline: none;
 }
 
 .Cancel {
