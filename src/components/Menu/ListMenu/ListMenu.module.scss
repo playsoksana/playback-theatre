@@ -1,0 +1,26 @@
+@import "../../../styles/vars.module.scss";
+@value white-color from '../../../styles/vars.module.scss';
+@value accent-color from '../../../styles/vars.module.scss';
+
+.List {
+      @include style-text(white-color, 20px, 500);
+      list-style: none;
+      padding: 30px 40px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 60%;
+      max-height: 80%;  
+    }
+    
+    .Item {
+      padding: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: underline;
+      @include transition(color);
+      &:hover,
+      &:focus {
+    color: accent-color;
+      }
+    }

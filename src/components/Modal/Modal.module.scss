@@ -4,7 +4,7 @@
 @value accent-color from '../../styles/vars.module.scss';
 
 .Backdrop {
-  z-index: 999;
+ 
 
   position: fixed;
   top: 0;
@@ -12,46 +12,22 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 80px 30px;
-
+  @include flex-center;
   overflow: auto;
-}
-
-.List {
-  @include style-text(white-color, 20px, 500);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.Item {
-  padding: 10px 0;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: underline;
-  @include transition(color);
-  &:hover,
-  &:focus {
-color: accent-color;
-  }
 }
 
 .Button {
   position: absolute;
   top: 15px;
   right: 15px;
-  color: inherit;
+  color: white-color;
   background-color: transparent;
   padding: 10px;
-  outline: none!important;
+  outline: none !important;
   border-color: transparent;
 }
 
 .Cancel {
- 
   fill: currentColor;
   @include transition(color);
   width: 32px;

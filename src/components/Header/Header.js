@@ -4,24 +4,32 @@ import Container from "../Container";
 import Logo from "../Logo";
 import Menu from "../Menu";
 import MenuNav from "../MenuNav";
-import ModalMenu from "../ModalMenu";
+import Modal from "../Modal";
+import ListMenu from "../Menu/ListMenu";
 
 import style from "./Header.module.scss";
 
-import listMenu from "../../file/listMenu";
-import { scrollBodyIfOpenModal } from "../../js/scrollBodyIfOpenModal";
+import { scrollBodyIfOpenModal} from "../../js/scrollBodyIfOpenModal";
 
 function Header() {
   const [classHeader, setClassHeader] = useState("Header");
   const [visible, setVisible] = useState(false);
 
+
   scrollBodyIfOpenModal(visible);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setClassHeader(window.scrollY > 10 ? "HeaderScroll" : "Header");
-    });
-  }, [classHeader]);
+  function setClass() {
+    setClassHeader(window.scrollY > 10 ? "HeaderScroll" : "Header");
+  }
+
+  useEffect(()=>{
+  
+    window.addEventListener('scroll', setClass);
+
+    return ()=>{
+      window.removeEventListener('scroll', setClass);
+    }
+  }, [])
 
   function onToggleModal() {
     setVisible(!visible);
@@ -35,7 +43,7 @@ function Header() {
           <MenuNav />
           <Menu onToggleModal={onToggleModal} />
           {visible && (
-            <ModalMenu listMenu={listMenu} onToggleModal={onToggleModal} />
+            <Modal  onToggleModal={onToggleModal}><ListMenu/></Modal>
           )}
         </nav>
       </Container>
