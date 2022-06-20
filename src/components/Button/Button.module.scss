@@ -1,0 +1,26 @@
+@import "../../styles/vars.module.scss";
+@value white-color from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+@value dark-background from '../../styles/vars.module.scss';
+
+
+.Button {
+  padding: 7px 20px;
+  min-width: 400px;
+  
+  background-color: dark-background;
+  border: 1px solid dark-background;
+  border-radius: 2px;
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  @include transition(color);
+  @include style-text(white-color, 18px, 500);
+
+  &:hover,
+  &:focus {
+    background-color: accent-color;
+    color: white-color;
+    border: 1px solid accent-color;
+  }
+}
