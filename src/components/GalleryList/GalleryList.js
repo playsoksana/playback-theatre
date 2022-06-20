@@ -1,6 +1,11 @@
+
 const Gallery = () => {
+   
+  
     return (<ul>
-        sdncjdkscbndsjbc
+        <li>
+        вів
+       </li>
     </ul>)
 }
 
