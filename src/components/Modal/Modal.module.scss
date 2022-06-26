@@ -4,8 +4,9 @@
 @value accent-color from '../../styles/vars.module.scss';
 
 .Backdrop {
- 
-
+ // Fixed z-index
+  z-index: 2;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,8 +39,4 @@
   }
 }
 
-@media screen and (min-width: tablet) {
-  .Backdrop {
-    display: none;
-  }
-}
+

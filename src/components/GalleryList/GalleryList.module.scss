@@ -1,0 +1,43 @@
+@import "../../styles/vars.module.scss";
+
+@value laptop from '../../styles/vars.module.scss';
+@value tablet from '../../styles/vars.module.scss';
+@value mobile from '../../styles/vars.module.scss';
+
+.List {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 20px;
+}
+
+.Item {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  filter: grayscale(100%);
+  @include transition(filter);
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .List {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
+@media screen and (min-width: laptop) {
+  .List {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}

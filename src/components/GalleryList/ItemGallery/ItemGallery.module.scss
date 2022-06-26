@@ -1,0 +1,98 @@
+@import "../../../styles/vars.module.scss";
+
+@value primary-text-color from '../../../styles/vars.module.scss';
+@value white-color from '../../../styles/vars.module.scss';
+@value accent-color from '../../../styles/vars.module.scss';
+@value tablet from '../../../styles/vars.module.scss';
+@value laptop from '../../../styles/vars.module.scss';
+
+.Wrap {
+  display: flex;
+}
+
+.Button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  @include flex-center;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.145);
+}
+
+.Chevron {
+  @include flex-center;
+  @include transition(fill);
+  fill: rgba(255, 255, 255, 0.811);
+  width: 20px;
+  height: 20px;
+  &:hover,
+  &:focus {
+    fill: accent-color;
+  }
+}
+
+.Chevron path {
+  color: inherit;
+  fill: inherit;
+}
+
+.Original {
+  left: 10px;
+}
+
+.Reverse {
+  right: 10px;
+  .Chevron {
+    transform: rotate(180deg);
+  }
+}
+
+.Photo {
+  display: flex;
+  align-items: center;
+  max-height: 90vh;
+  max-width: 80vw;
+  overflow: hidden;
+  object-fit: contain;
+  position: relative;
+  transition: transform 1s ease;
+  border: 2px solid transparent;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .Photo {
+    max-height: 90vh;
+    max-width: 30vw;
+  }
+
+  .Chevron {
+    @include flex-center;
+
+    width: 50px;
+    height: 50px;
+  }
+  .Button {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: laptop) {
+  .Photo {
+    max-height: 90vh;
+    max-width: 30vw;
+  }
+
+  .Chevron {
+    @include flex-center;
+
+    width: 50px;
+    height: 50px;
+  }
+}

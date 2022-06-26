@@ -16,11 +16,11 @@ const Hero = () => {
         <h1 className={style.Title}>Kyiv Playback Theatre</h1>
         <ul className={style.List}>
         <li className={style.Item}><NavLink to="/gallery" className={style.Link}
-      activeClassName={style.activeLink}>
+      >
 Галерея
           </NavLink></li>
           <li className={style.Item}><NavLink to='/donate' className={style.Link}
-      activeClassName={style.activeLink}>Допомогти проекту</NavLink></li>
+      >Допомогти проекту</NavLink></li>
         </ul>
       </div>
         

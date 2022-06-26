@@ -9,7 +9,7 @@ import {ReactComponent as Cancel} from '../../Icons/cancel-circle.svg'
 const rootModal = document.querySelector('#modal');
 const Modal = ( {children, onToggleModal }) => {
   
-  return createPortal(<div onClick={onToggleModal} className={style.Backdrop}>
+  return createPortal(<div className={style.Backdrop}>
     <button className={style.Button} type="button" onClick={onToggleModal}><Cancel className={style.Cancel} /></button>
      {children}
     </div>, rootModal)

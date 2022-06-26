@@ -36,18 +36,21 @@ function Header() {
   }
 
   return (
+    <>
     <header className={style[classHeader]}>
       <Container>
         <nav className={style.Nav}>
           <Logo />
           <MenuNav />
           <Menu onToggleModal={onToggleModal} />
-          {visible && (
-            <Modal  onToggleModal={onToggleModal}><ListMenu/></Modal>
-          )}
+         
         </nav>
       </Container>
     </header>
+    {visible && (
+            <Modal  onToggleModal={onToggleModal}><ListMenu/></Modal>
+          )}
+    </>
   );
 }
 
