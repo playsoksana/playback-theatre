@@ -5,7 +5,7 @@ import style from "./Registration.module.scss";
 import Button from "../../Button";
 import Input from "../../Input";
 
-import { v4 as uuidv4 } from "uuid";
+import { NavLink } from "react-router-dom";
 
 const Registration = ({ onSubmitForm }) => {
   const [state, setState] = useState({ name: "", email: "", password: "" });
@@ -13,9 +13,8 @@ const Registration = ({ onSubmitForm }) => {
     e.preventDefault();
     onSubmitForm({
       name: e.target.name.value,
-      email: e.target.name.value,
+      email: e.target.email.value,
       password: e.target.password.value,
-      id: uuidv4(),
     });
     setState({ name: "", email: "", password: "" });
   }
@@ -25,6 +24,7 @@ const Registration = ({ onSubmitForm }) => {
   }
 
   return (
+    <>
     <form className={style.Form} onSubmit={onSubmit}>
       <h2 className={style.Title}>Зареєструватись</h2>
       <Input
@@ -64,6 +64,8 @@ const Registration = ({ onSubmitForm }) => {
 
       <Button type="submit">Зареєструватись</Button>
     </form>
+    <NavLink to='/enter/login'>Login</NavLink>
+    </>
   );
 };
 

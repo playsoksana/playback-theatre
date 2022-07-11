@@ -1,7 +1,13 @@
-import Hero from '../../components/Hero'
+import About from "../../components/About";
+import Hero from "../../components/Hero";
 
 const Home = () => {
-    return (<div><Hero/></div>)
-}
+  return (
+    <div>
+      <Hero />
+      <About />
+    </div>
+  );
+};
 
 export default Home;

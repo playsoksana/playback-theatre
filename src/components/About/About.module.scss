@@ -1,0 +1,29 @@
+@import '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+
+.Section {
+background-color: accent-color;
+}
+
+.List {
+    list-style: none;
+    padding: 0;
+}
+
+.Item {
+   border: 1px solid red; 
+   margin-bottom: 20px;
+   display: flex;
+
+}
+
+.Text {
+text-align: justify;
+&:first-letter {
+@include style-text(inherit, 18px, 700)
+    
+}}
+
+
+
+

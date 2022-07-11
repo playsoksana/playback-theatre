@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Container from "../Container";
+import style from "./Header.module.scss";
 
-import Logo from "../Logo";
+import Container from "../Container";
 import Menu from "../Menu";
 import MenuNav from "../MenuNav";
+
 import Modal from "../Modal";
 import ListMenu from "../Menu/ListMenu";
+import Logo from '../Logo';
+import User from '../User';
 
-import style from "./Header.module.scss";
 
 import { scrollBodyIfOpenModal} from "../../js/scrollBodyIfOpenModal";
 
@@ -42,8 +44,9 @@ function Header() {
         <nav className={style.Nav}>
           <Logo />
           <MenuNav />
+          
           <Menu onToggleModal={onToggleModal} />
-         
+         <User className={style.User}></User>
         </nav>
       </Container>
     </header>

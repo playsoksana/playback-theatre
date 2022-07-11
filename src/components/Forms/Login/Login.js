@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Input from "../../Input";
 import Button from "../../Button";
 import style from "./Login.module.scss";
+import { NavLink } from "react-router-dom";
 const Login = ({ onSubmitForm }) => {
   const [state, setState] = useState({ email: "", password: "" });
 
@@ -20,6 +21,7 @@ const Login = ({ onSubmitForm }) => {
   }
 
   return (
+    <>
     <form className={style.Form} onSubmit={onSubmit}>
       <h2 className={style.Title}>Увійти</h2>
       <Input
@@ -47,6 +49,8 @@ const Login = ({ onSubmitForm }) => {
       />
       <Button type="submit">Увійти</Button>
     </form>
+    <NavLink to='/enter/registration'>Regist</NavLink>
+   </>
   );
 };
 

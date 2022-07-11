@@ -1,0 +1,67 @@
+@import "../../styles/vars.module.scss";
+@value tablet from '../../styles/vars.module.scss';
+@value white-color from '../../styles/vars.module.scss';
+@value accent-color from '../../styles/vars.module.scss';
+
+.Wrap {
+  display: none;
+  position: relative;
+
+  &:hover .Button {
+    color: accent-color;
+
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover .Name {
+    opacity: 0;
+  }
+
+  .Button {
+    background-color: black;
+    position: absolute;
+    bottom: -10px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 400ms ease;
+    transform: translateX(100px);
+  }
+}
+
+.Name {
+  margin: 0 0 5px;
+
+  font-size: 10px;
+  position: relative;
+  top: 0;
+  top: 50%;
+}
+
+.IsLogin {
+  fill: accent-color;
+}
+
+.User {
+  fill: gray;
+}
+
+.Enter {
+  text-decoration: none;
+  @include style-text(white-color, 14px, 500);
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: accent-color;
+  }
+}
+
+@media screen and (min-width: tablet) {
+  .Wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
