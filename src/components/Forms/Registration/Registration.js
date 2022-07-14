@@ -63,8 +63,9 @@ const Registration = ({ onSubmitForm }) => {
       />
 
       <Button type="submit">Зареєструватись</Button>
+      <NavLink className={style.Link} to='/enter/login'>Увійти</NavLink>
     </form>
-    <NavLink to='/enter/login'>Login</NavLink>
+   
     </>
   );
 };

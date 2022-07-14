@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import style from "./Header.module.scss";
 
 import Container from "../Container";
@@ -42,7 +43,10 @@ function Header() {
     <header className={style[classHeader]}>
       <Container>
         <nav className={style.Nav}>
-          <Logo />
+        <NavLink to='/'>
+        <Logo />
+        </NavLink>
+       
           <MenuNav />
           
           <Menu onToggleModal={onToggleModal} />

@@ -48,8 +48,10 @@ const Login = ({ onSubmitForm }) => {
         required
       />
       <Button type="submit">Увійти</Button>
+
+      <NavLink className={style.Link} to='/enter/registration'>Реєстрація</NavLink>
     </form>
-    <NavLink to='/enter/registration'>Regist</NavLink>
+
    </>
   );
 };

@@ -38,7 +38,7 @@ const User = () => {
         <>
           <UserSvg className={style.User}></UserSvg>
           <NavLink className={style.Enter} to="/enter/login">
-            Enter
+            Увійти
           </NavLink>
         </>
       )}
